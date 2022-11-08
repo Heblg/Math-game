@@ -3,14 +3,12 @@ import math
 operator,x,tries,g = ["*","/","-","+"],[],3,1
 op = operator[randrange(0,3)]
 level_list = ["1","2","3"]
-
 while g == 1:
     level = str(input("level (1 | 2 | 3): "))
     if level not in level_list:
         print("Wrong level")
     else:
         g = 0
-        
 if level == "1":
     x.append(randrange(0,9))
     x.append(op)
@@ -40,8 +38,8 @@ if "+" in x:
 
 while tries != 0:
     print(f"{x[0]} {x[1]} {x[2]}")
-    ans = float(input("Answer: "))
-    if ans == final:
+    ans = str(input("Answer: "))
+    if ans == str(final):
         print('correct')
         break
     else:
